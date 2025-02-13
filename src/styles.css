@@ -21,11 +21,29 @@ body {
 }
 
 img {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
 }
 
 .heading_container {
     display: flex;
     align-items: center;
+    column-gap: 10px;
+}
+
+.input_container {
+    display: flex;
+    column-gap: 5px;
+}
+
+button {
+    font-family: "Atma", serif;
+    padding: 0px 10px;
+    border-radius: 3px;
+    border: 1px solid black
+}
+
+input {
+    height: 24px;
+    width: 300px;
 }

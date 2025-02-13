@@ -1,4 +1,6 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -11,4 +13,19 @@ body {
     align-items: center;
     height: 100vh;
     row-gap: 10px;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(186,255,254,1) 78%, rgba(175,242,255,1) 100%);
+    font-family: "Atma", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+img {
+    width: 20px;
+    height: 20px;
+}
+
+.heading_container {
+    display: flex;
+    align-items: center;
 }

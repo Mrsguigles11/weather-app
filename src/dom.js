@@ -15,6 +15,7 @@ function bindEvents() {
 
 function addContent(object) {
     cache.content.innerHTML = "";
+    cache.input.value = "";
     const location = document.createElement('div');
     location.textContent = `Location: ${object.location}`;
     const description = document.createElement('div');

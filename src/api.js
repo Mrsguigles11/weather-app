@@ -14,9 +14,12 @@ async function fetchData(location) {
     const json = await response.json();
     const data = {
       location: json.address,
+      temperature: json.currentConditions.temp,
       description: json.description,
       latitude: json.latitude,
       longitude: json.longitude,
+      humidity: json.currentConditions.humidity,
+      pressure: json.currentConditions.pressure
     };
     addContent(data);
     console.log(json);

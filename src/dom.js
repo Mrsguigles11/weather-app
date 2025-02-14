@@ -19,11 +19,15 @@ function addContent(object) {
   mainContentBox.setAttribute('class', 'main_content_box');
   const location = document.createElement('h2');
   location.textContent = object.location;
-  const temperature = document.createElement('div');
-  temperature.textContent = object.temperature;
+  const temperature = document.createElement('span');
+  temperature.setAttribute('class', 'temperature');
+  temperature.textContent = object.temperature + '\u{000B0}' + "c";
+  const locTempContainer = document.createElement('div');
+  locTempContainer.setAttribute('class', 'loc_temp_cont');
+  locTempContainer.append(location, temperature);
   const description = document.createElement('div');
   description.textContent = object.description;
-  mainContentBox.append(location, temperature, description);
+  mainContentBox.append(locTempContainer, description);
   const locationBox = document.createElement('div');
   locationBox.setAttribute('class', 'content_box');
   const latitude = document.createElement('div');

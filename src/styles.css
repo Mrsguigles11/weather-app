@@ -3,6 +3,11 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+    font-size: 18px;
 }
 
 body {
@@ -61,10 +66,31 @@ input {
 
 .main_content_box {
     grid-area: 1 / 1 / 3 / 2;
+    display: flex;
+    flex-direction: column;
     background-color: white;
     height: 300px;
     width: 400px;
     border-radius: 5px;
+    padding: 20px;
+    justify-content: space-between;
+
+}
+
+.loc_temp_cont {
+    display: flex;
+    align-items: start;
+    justify-content: space-evenly;
+}
+
+.temperature {
+    font-size: 6rem;
+    line-height: 1.4;
+}
+
+h2 {
+    padding-top: 40px;
+    font-size: 1.5rem;
 }
 
 .content_box {

@@ -4,6 +4,9 @@ const cache = {
   input: document.querySelector("input"),
   searchbtn: document.querySelector("button"),
   content: document.querySelector(".content"),
+  switch: document.querySelector(".switch"),
+  checkbox: document.querySelector("#checkbox"),
+  switchText: document.querySelector(".switch_text")
 };
 
 function bindEvents() {
@@ -66,9 +69,18 @@ function addContent(object) {
   pressureCont.append(pressureHeading, pressure);
   conditionsBox.append(humidityCont, pressureCont);
   cache.content.append(mainContentBox, locationBox, conditionsBox);
+  cache.switch.style.display = "inline-block";
+  cache.checkbox.addEventListener('click', () => {
+    if (cache.checkbox.checked === true) {
+        const convertedTemp = (object.temperature - 32) * 5/9;
+        temperature.textContent = Math.trunc(convertedTemp) + '\u{000B0}' + "c";
+    }
+    else {
+        temperature.textContent = object.temperature + '\u{000B0}' + "f";
+    }
+  })
+  cache.switchText.style.display = "block";
 }
-
-// temperature.textContent = object.temperature + '\u{000B0}' + "c";
 
 function checkTemp(temp) {
     if (temp <= 50) {
@@ -81,6 +93,5 @@ function checkTemp(temp) {
         return "#ae0001"
     }
 }
-
 
 export { bindEvents, addContent };

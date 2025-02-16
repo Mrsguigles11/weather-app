@@ -90,4 +90,17 @@ h2 {
 .content_box {
     background-color: white;
     border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info_cont {
+    display: flex;
+    column-gap: 10px;
+}
+
+.box_heading {
+    font-weight: 500;
 }

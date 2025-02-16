@@ -22,7 +22,6 @@ async function fetchData(location) {
       pressure: json.currentConditions.pressure
     };
     addContent(data);
-    console.log(json);
   } catch (err) {
     alert(err);
   }

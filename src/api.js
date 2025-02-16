@@ -19,7 +19,7 @@ async function fetchData(location) {
       latitude: json.latitude,
       longitude: json.longitude,
       humidity: json.currentConditions.humidity,
-      pressure: json.currentConditions.pressure
+      pressure: json.currentConditions.pressure,
     };
     addContent(data);
   } catch (err) {

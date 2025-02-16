@@ -21,13 +21,12 @@ function addContent(object) {
   location.textContent = object.location;
   const temperature = document.createElement('span');
   temperature.setAttribute('class', 'temperature');
-  temperature.textContent = object.temperature + '\u{000B0}' + "c";
-  const locTempContainer = document.createElement('div');
-  locTempContainer.setAttribute('class', 'loc_temp_cont');
-  locTempContainer.append(location, temperature);
+  temperature.textContent = object.temperature + '\u{000B0}' + "f";
+  temperature.style.color = checkTemp(object.temperature);
   const description = document.createElement('div');
   description.textContent = object.description;
-  mainContentBox.append(locTempContainer, description);
+  description.setAttribute('class', 'description');
+  mainContentBox.append(location, temperature, description);
   const locationBox = document.createElement('div');
   locationBox.setAttribute('class', 'content_box');
   const latitude = document.createElement('div');
@@ -44,5 +43,20 @@ function addContent(object) {
   conditionsBox.append(humidity, pressure);
   cache.content.append(mainContentBox, locationBox, conditionsBox);
 }
+
+// temperature.textContent = object.temperature + '\u{000B0}' + "c";
+
+function checkTemp(temp) {
+    if (temp <= 50) {
+        return "#01cdfe"
+    }
+    else if (temp <= 68) {
+        return "#eeba30"
+    }
+    else {
+        return "#ae0001"
+    }
+}
+
 
 export { bindEvents, addContent };

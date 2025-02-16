@@ -69,28 +69,22 @@ input {
     display: flex;
     flex-direction: column;
     background-color: white;
-    height: 300px;
-    width: 400px;
     border-radius: 5px;
-    padding: 20px;
+    padding: 20px 40px;
     justify-content: space-between;
-
-}
-
-.loc_temp_cont {
-    display: flex;
-    align-items: start;
-    justify-content: space-evenly;
 }
 
 .temperature {
     font-size: 6rem;
-    line-height: 1.4;
+    line-height: 1.1;
 }
 
 h2 {
-    padding-top: 40px;
     font-size: 1.5rem;
+}
+
+.description {
+    font-style: italic;
 }
 
 .content_box {
